@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aromata Coffee Shop</title>
+    <!-- FONT AWESOME icons -->
+    <script
+      src="https://kit.fontawesome.com/f20ffe31b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Boostrap and my stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- NAVIGATION BAR -->
+      <div class="container fade-in-image">
+        <nav class="navbar" id="myTopnav">
+          <!-- logo -->
+          <div class="navbar_logo">
+            <a href="."
+              ><img
+                id="logo"
+                src="https://haanya.neocities.org/images/coffeelogoo.png"
+                alt="website logo"
+            /></a>
+          </div>
+
+          <ul class="navbar__links">
+            <li class="navbar__link"><a href="menu.html">Menu</a></li>
+            <li class="navbar__link"><a href="about.html">About</a></li>
+            <li class="navbar__link"><a href="career.html">Career</a></li>
+            <li class="navbar__link"><a href="faq.html">FAQ</a></li>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="skipping"></div>
+
+    <section id="faq_interactive_banner">
+      <div class="container">
+        <img alt="bears" src="https://haanya.neocities.org/images/faqpic1.jpg"/>
+        <img alt="bears" src="https://haanya.neocities.org/images/faq2.jpg"/>
+        <img alt="bears" src="https://haanya.neocities.org/images/faq3.jpg"/>
+        <img alt="bears" src="https://haanya.neocities.org/images/faq4.jpg"/>
+        <img alt="bears" src="https://haanya.neocities.org/images/faq5.png"/>
+      </div>
+      
+    </section>
+    <section id="faq-section">
+      <div id="faq">
+        <h1>FAQ</h1>
+        <ul>
+          <li>
+            <input type="checkbox" checked />
+            <i></i>
+            <h2>Where are you located?</h2>
+            <p>
+              208 Nguyen Huu Canh <br />
+              District Binh Thanh, Ho Chi Minh City, Vietnam
+            </p>
+          </li>
+          <li>
+            <input type="checkbox" checked />
+            <i></i>
+            <h2>What amenities do we offer?</h2>
+            <p>
+              We offer complimentary Wi-Fi to all our cafe guests. Whether
+              you're here for work or leisure, stay connected and enjoy our
+              internet access.
+            </p>
+          </li>
+          <li>
+            <input type="checkbox" checked />
+            <i></i>
+            <h2>Can I order for online pickup?</h2>
+            <p>
+              We apologize for any inconvenience, but at the moment, we do not
+              offer online ordering for pickup. We also do not take cafe orders
+              over the phone. Our baristas work diligently to ensure the best
+              experience for our customers, and the high volume of incoming
+              calls for pickup orders would be disruptive to the flow of
+              service. We appreciate your understanding.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer class="bg-light text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <div class="text-center">
+            <!-- Facebook -->
+            <a
+              class="btn btn-primary btn-floating m-1 nhich-transition"
+              style="background-color: #3b5998"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <!-- Google -->
+            <a
+              class="btn btn-primary btn-floating m-1 nhich-transition"
+              style="background-color: #dd4b39"
+              href="https://maps.app.goo.gl/wWmTFDQfk5U5KaGv7"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a
+              class="btn btn-primary btn-floating m-1 nhich-transition"
+              style="background-color: #ac2bac"
+              href="https://instagram.com/aromatacoffeetea"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Copyright -->
+      <div class="p-3 footer_blur"><h5 class="text-center">
+        &copy; 2023 Aromata Coffee & Tea
+      </h3></div>
+      <!-- Copyright -->
+    </footer>
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          document.getElementById("myTopnav").style.padding = "0px 0px";
+          document.getElementById("logo").style.height = "100px";
+          document.getElementById("logo").style.height = "100px";
+          let navlis = document.getElementsByClassName("navbar__link");
+          for (i = 0; i < navlis.length; i++) {
+            navlis[i].style.marginTop = "0px";
+            navlis[i].style.marginBottom = "0px";
+            navlis[i].firstElementChild.style.fontSize = "24px";
+          }
+        } else {
+          document.getElementById("myTopnav").style.padding = "40px 0px";
+          document.getElementById("logo").style.height = "150px";
+          let navlis = document.getElementsByClassName("navbar__link");
+          for (i = 0; i < navlis.length; i++) {
+            navlis[i].style.marginTop = "55px";
+            navlis[i].style.marginBottom = "55px";
+            navlis[i].firstElementChild.style.fontSize = "30px";
+          }
+        }
+      }
+      function myFunction() {
+        // this bit of JavaScript just selects responsive className
+        // when you click on the hamburger icon,
+        var x = document.getElementById("myTopnav");
+        if (x.className === "navbar") {
+          x.className += " hamburger";
+        } else {
+          x.className = "navbar";
+        }
+      }
+    </script>
+  </body>
+</html>
